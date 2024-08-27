@@ -1,5 +1,6 @@
 const axios = require("axios");
 
+// Later think of better API optons
 const getAmsterdamFestivalData = async () => {
 	try {
 		const response = await axios.get(
@@ -7,12 +8,13 @@ const getAmsterdamFestivalData = async () => {
 			{
 				headers: {
 					"X-api-key": process.env.AMSTERDAM_DATA_API_KEY,
+					"Content-Type": "application/json",
 				},
 			}
 		);
 		const data = await response.data;
-		console.log(data);
-		return data;
+
+		return data.evenementen;
 	} catch (err) {
 		console.log({ err });
 		throw err;
