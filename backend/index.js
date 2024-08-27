@@ -3,6 +3,8 @@ const app = express();
 
 const PORT = 8000;
 
+const getAmsterdamFestivalData = require("./modules/getAmsterdamFestivalData");
+
 app.post("/login", (req, res) => {
 	// Hanlde login logic here
 	res.send("Login route");
@@ -26,6 +28,7 @@ app.get("/get-playlist", (req, res) => {
 
 app.get("/get-festivals", (req, res) => {
 	// Get Amsterdam festival data here
+	getAmsterdamFestivalData();
 	res.send("Get Amsterdam festival data here");
 });
 
