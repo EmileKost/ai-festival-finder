@@ -1,12 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+
+import Link from "next/link";
 
 import { Navigation } from "./Navigation";
 import { Tag } from "../Tag";
 
 import { MAX_USER_SCROLL } from "@/constants/constants";
+import { ROUTES } from "@/constants/routes";
 
 type TheHeaderProps = {
 	isBeta: boolean;
@@ -28,7 +31,9 @@ export const TheHeader = ({ isBeta }: TheHeaderProps) => {
 				opacity: isScrolling ? 0 : 1,
 			}}
 			className="w-full fixed top-0 left-0 pt-16 pb-8 px-3 md:px-5 flex items-center justify-between">
-			<div className="flex flex-col md:flex-row gap-1 md:gap-2 items-start md:items-center">
+			<Link
+				href={ROUTES.HOME}
+				className="flex flex-col md:flex-row gap-1 md:gap-2 items-start md:items-center">
 				<h1 className="uppercase text-xl text-white-primary font-normal">
 					Unveil AI.
 				</h1>
@@ -38,7 +43,7 @@ export const TheHeader = ({ isBeta }: TheHeaderProps) => {
 						color="#717171"
 					/>
 				)}
-			</div>
+			</Link>
 			<Navigation setModalOpen={setIsOpen} />
 		</motion.header>
 	);
