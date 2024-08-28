@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { TheHeader } from "@/components/TheHeader";
+import { TheHeader } from "@/components/header/TheHeader";
 
 export const metadata: Metadata = {
 	title: "AI Festival finder",
