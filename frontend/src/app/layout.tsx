@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className=" w-full bg-black-secondary">
+			<body className=" w-full bg-black-secondary h-[110vh]">
 				<TheHeader isBeta={true} />
 				{children}
 			</body>
