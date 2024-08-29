@@ -11,6 +11,7 @@ export const IconLogo = ({ type }: IconLogoProps) => {
 		case "spotify":
 			return <IconSpotify />;
 		case "hamburger":
+			// Placeholder case
 			return <IconHamburger />;
 		default:
 			return;
