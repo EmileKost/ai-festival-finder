@@ -32,7 +32,7 @@ export const TheHeader = ({ isBeta }: TheHeaderProps) => {
 				y: isScrolling ? "-100%" : "0%",
 				opacity: isScrolling ? 0 : 1,
 			}}
-			className="w-full fixed top-0 left-0 pt-16 pb-8 px-3 md:px-5 flex items-center justify-between">
+			className="w-full fixed top-0 left-0 pt-16 pb-8 px-3 md:px-5 flex items-center justify-between z-20">
 			<Link
 				href={ROUTES.HOME}
 				className="flex flex-col md:flex-row gap-1 md:gap-2 items-start md:items-center">
