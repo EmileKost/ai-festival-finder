@@ -1,3 +1,5 @@
+import { IconLogo } from "./icons/logos/IconLogo";
+
 import { Collaborator } from "@/types/collaborator";
 
 type CollaborationProps = {
@@ -15,7 +17,7 @@ export const Collaboration = ({ collaborators }: CollaborationProps) => {
 						target="_blank"
 						key={collaborator.text}
 						className="flex gap-2 items-center">
-						{collaborator.icon}
+						<IconLogo type={collaborator.icon} />
 						<h4 className="text-grey-primary hidden md:block text-lg">
 							{collaborator.text}
 						</h4>
