@@ -10,14 +10,16 @@ export const Collaboration = ({ collaborators }: CollaborationProps) => {
 			{collaborators &&
 				collaborators.length > 0 &&
 				collaborators.map((collaborator) => (
-					<div
+					<a
+						href={collaborator.href}
+						target="_blank"
 						key={collaborator.text}
 						className="flex gap-2 items-center">
 						{collaborator.icon}
 						<h4 className="text-grey-primary hidden md:block text-lg">
 							{collaborator.text}
 						</h4>
-					</div>
+					</a>
 				))}
 		</div>
 	);
