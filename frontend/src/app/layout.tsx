@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import { TheHeader } from "@/components/header/TheHeader";
+
 export const metadata: Metadata = {
 	title: "AI Festival finder",
 	description: "Find festivals based on your music",
@@ -13,7 +15,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body className=" w-full bg-black-secondary h-screen">
+				<TheHeader isBeta={true} />
+				{children}
+			</body>
 		</html>
 	);
 }
