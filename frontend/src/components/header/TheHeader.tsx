@@ -24,8 +24,6 @@ export const TheHeader = ({ isBeta }: TheHeaderProps) => {
 		setIsScrolling(latest >= MAX_USER_SCROLL ? true : false);
 	});
 
-	console.log("test");
-
 	return (
 		<motion.header
 			animate={{
