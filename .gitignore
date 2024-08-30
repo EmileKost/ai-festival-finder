@@ -6,4 +6,4 @@ backend/node_modules
 ./frontend/node_modules/.DS_Store
 ./frontend/node_modules/next/.DS_Store
 ./frontend/node_modules/next/dist/.DS_Store
-
+frontend/.env
