@@ -8,6 +8,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				"sans-custom": ["roboto"],
+			},
 			colors: {
 				black: {
 					primary: "#000000",
@@ -25,3 +28,5 @@ const config: Config = {
 	plugins: [],
 };
 export default config;
+
+// TODO: add custom fonts
